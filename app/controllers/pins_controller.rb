@@ -22,6 +22,7 @@ before_action :correct_user, only: [:edit, :update, :destroy]
 
   def create
     @pin = current_user.pins.build(pin_params)
+    
   if @pin.save
       redirect_to @pin, notice: 'Pin was successfully created.'
     else
