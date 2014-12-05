@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'pages/contact'
 
-  root "pages#home"
+  root "pins#index"
   get "about" => "pages#about"
   get "contact" => "pages#contact"
 
