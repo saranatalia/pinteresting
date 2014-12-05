@@ -5,7 +5,7 @@ before_action :correct_user, only: [:edit, :update, :destroy]
   respond_to :html
 
   def index
-    @pins = Pin.all
+    @pins = Pin.all.order("created_at DESC")
     respond_with(@pins)
   end
 
